@@ -8,11 +8,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xfcdxg/react-page-mask.git"
+    "url": "https://github.com/xfcdxg/react-pop-page.git"
   },
   "bugs": {
     "mail": "xfcdxg_zq@163.com",
-    "url": "https://github.com/xfcdxg/react-page-mask/issues"
+    "url": "https://github.com/xfcdxg/react-pop-page/issues"
   },
   "keywords": [
     "react-component",
