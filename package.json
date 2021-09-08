@@ -2,6 +2,7 @@
   "name": "react-pop-page",
   "version": "1.0.0",
   "author": "zhou",
+  "main": "./common/index.js",
   "files": [
     "dist",
     "common"
