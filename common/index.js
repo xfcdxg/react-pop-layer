@@ -29,11 +29,14 @@ var slidePageList = [];
 var location = window.location;
 var history = window.history;
 
-var PopPage = function PopPage(content, options) {
-  var _options$mask = options.mask,
-      mask = _options$mask === void 0 ? false : _options$mask,
-      maskConfig = options.maskConfig,
-      props = _objectWithoutProperties(options, _excluded);
+var PopPage = function PopPage(content) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  var _ref = options || {},
+      _ref$mask = _ref.mask,
+      mask = _ref$mask === void 0 ? false : _ref$mask,
+      maskConfig = _ref.maskConfig,
+      props = _objectWithoutProperties(_ref, _excluded);
 
   (0, _reactPageMask.default)( /*#__PURE__*/_react.default.createElement(SlidePage, props, content), _objectSpread({
     mask: mask
@@ -60,26 +63,26 @@ var refreshSlidePageList = function refreshSlidePageList() {
   });
 };
 
-var SlidePage = function SlidePage(_ref) {
-  var children = _ref.children,
-      _ref$bgColor = _ref.bgColor,
-      bgColor = _ref$bgColor === void 0 ? '#fff' : _ref$bgColor,
-      _ref$target = _ref.target,
-      target = _ref$target === void 0 ? 'right' : _ref$target,
-      _ref$enableHash = _ref.enableHash,
-      enableHash = _ref$enableHash === void 0 ? true : _ref$enableHash,
-      _ref$enableClose = _ref.enableClose,
-      enableClose = _ref$enableClose === void 0 ? true : _ref$enableClose,
-      _ref$closePosition = _ref.closePosition,
-      closePosition = _ref$closePosition === void 0 ? 'right' : _ref$closePosition,
-      _ref$closeContainerSt = _ref.closeContainerStyle,
-      closeContainerStyle = _ref$closeContainerSt === void 0 ? {} : _ref$closeContainerSt,
-      closeComponent = _ref.closeComponent,
-      _ref$style = _ref.style,
-      style = _ref$style === void 0 ? {} : _ref$style,
-      _ref$handleClose = _ref.handleClose,
-      handleClose = _ref$handleClose === void 0 ? function () {} : _ref$handleClose,
-      handleContainerClose = _ref.handleContainerClose;
+var SlidePage = function SlidePage(_ref2) {
+  var children = _ref2.children,
+      _ref2$bgColor = _ref2.bgColor,
+      bgColor = _ref2$bgColor === void 0 ? '#fff' : _ref2$bgColor,
+      _ref2$target = _ref2.target,
+      target = _ref2$target === void 0 ? 'right' : _ref2$target,
+      _ref2$enableHash = _ref2.enableHash,
+      enableHash = _ref2$enableHash === void 0 ? true : _ref2$enableHash,
+      _ref2$enableClose = _ref2.enableClose,
+      enableClose = _ref2$enableClose === void 0 ? true : _ref2$enableClose,
+      _ref2$closePosition = _ref2.closePosition,
+      closePosition = _ref2$closePosition === void 0 ? 'right' : _ref2$closePosition,
+      _ref2$closeContainerS = _ref2.closeContainerStyle,
+      closeContainerStyle = _ref2$closeContainerS === void 0 ? {} : _ref2$closeContainerS,
+      closeComponent = _ref2.closeComponent,
+      _ref2$style = _ref2.style,
+      style = _ref2$style === void 0 ? {} : _ref2$style,
+      _ref2$handleClose = _ref2.handleClose,
+      handleClose = _ref2$handleClose === void 0 ? function () {} : _ref2$handleClose,
+      handleContainerClose = _ref2.handleContainerClose;
   var hash = Date.now();
   var node;
 

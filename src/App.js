@@ -63,6 +63,16 @@ class App extends React.Component {
   handleShowPageCloseWithProcess() {
     popPage(<div />, { bgColor: 'black', handleClose: () => alert('正在被关闭') })
   }
+  handleShowNestedPage(count = 1) {
+    const Page = ({ pageCount }) => (
+      <div>
+        弹出层：{ pageCount }
+        <button onClick={ () => this.handleShowNestedPage(pageCount + 1) }>弹出第{ pageCount + 1 }层</button>
+        <button onClick={ () => window.history.back() }>{ pageCount === 1 ? '关闭' : '返回上一层' }</button>
+      </div>
+    )
+    popPage(<Page pageCount={ count } />)
+  }
   render() {
     return (
       <div>
@@ -85,6 +95,9 @@ class App extends React.Component {
         <button onClick={ this.handleShowPageWithoutHistory.bind(this) }>不记录浏览器历史</button>
 
         <button onClick={ this.handleShowPageWithContentClose.bind(this) }>内嵌页面自定义关闭</button>
+
+        <button onClick={ () => this.handleShowNestedPage() }>多层Page</button>
+
       </div>
     )
   }

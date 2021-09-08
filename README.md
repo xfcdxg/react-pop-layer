@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# react-page-page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React 弹出层组件，函数触发，不污染 DOM。
 
-## Available Scripts
+* 弹出层默认会产生浏览器历史，支持通过浏览器的回退按钮关闭。
 
-In the project directory, you can run:
+### 安装
+```
+  $ npm install react-pop-page
+  // or
+  $ yarn add react-pop-page
+```
 
-### `yarn start`
+### 引用
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```js
+  import popPage from 'react-pop-page'
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 使用方法
 
-### `yarn test`
+##### popPage(ReactNode, props)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+  const Layer = <div>content</div>
 
-### `yarn build`
+  // 基础用法
+  popPage(Layer)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  // 其他方向弹出
+  popPage(Layer, { target: 'up' })    // 上
+  popPage(Layer, { target: 'down' })  // 下
+  popPage(Layer, { target: 'left' })  // 左
+  popPage(Layer, { target: 'right' }) // 右
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  // 调整关闭位置
+  popPage(Layer, { closePosition: 'left' }) // 右
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  // 自定义关闭
+  popPage(<div />, { closeComponent: <span>关闭</span> })
 
-### `yarn eject`
+  // 隐藏关闭
+  popPage(<div />, { enableClose: false })
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  // 不启用浏览器历史
+  popPage(<div />, { enableHash: true })
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  // 关闭时处理逻辑
+  popPage(<div />, { handleClose: () => {} })
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  // 子组件关闭弹出层
+  const ChildPage = ({ handleContainerClose }) => (<div onClick={ handleContainerClose }></div>)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  popPage(<ChildPage />)
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 可配置的Props
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| 属性 | 类型 | 默认值 | 描述 |
+|---|---|---|---|
+| mask | Boolean | true | 是否展示遮罩 |
+| maskConfig|Object|{}|配置遮罩层，具体配置参考：React-Page-Mask|
+| target | String| right | 可配置弹出方向，可选项：up / down / left / right
+| bgColor | String | #fff| 设置弹出层背景色，同 background-color |
+| style | Object | {} | 弹出层的样式 |
+| enableHash |Boolean|true| 是否开启记录浏览器历史|
+| enableClose|Boolean|true|是否展示关闭区|
+| closeComponent|ReactNode|null|自定义关闭按钮|
+| closePosition|String|'right'|配置关闭区位置，可选：left/right|
+| closeContainerStyle | Object | {} |配置容器的样式|
+| handleClose|Function|() => {}|关闭时的处理逻辑|

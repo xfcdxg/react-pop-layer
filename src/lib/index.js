@@ -6,8 +6,8 @@ let slidePageList = []
 let location = window.location
 let history = window.history
 
-const PopPage = (content, options) => {
-  const { mask = false, maskConfig, ...props } = options
+const PopPage = (content, options = {}) => {
+  const { mask = false, maskConfig, ...props } = options || {}
   Mask(
     <SlidePage { ...props }>
       { content }
