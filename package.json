@@ -2,10 +2,10 @@
   "name": "react-pop-page",
   "version": "1.0.1",
   "author": "zhou",
-  "main": "./common/index.js",
+  "main": "./lib/index.js",
   "files": [
     "dist",
-    "common"
+    "lib"
   ],
   "repository": {
     "type": "git",
