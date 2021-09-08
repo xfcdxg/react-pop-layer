@@ -11,6 +11,9 @@ React 弹出层组件，函数触发，不污染 DOM。
   $ yarn add react-pop-page
 ```
 
+### DEMO
+[React-Pop-Page]
+
 ### 引用
 
 ```js
@@ -60,7 +63,7 @@ React 弹出层组件，函数触发，不污染 DOM。
 | 属性 | 类型 | 默认值 | 描述 |
 |---|---|---|---|
 | mask | Boolean | true | 是否展示遮罩 |
-| maskConfig|Object|{}|配置遮罩层，具体配置参考：React-Page-Mask|
+| maskConfig|Object|{}|配置遮罩层，具体配置参考：[React-Page-Mask]|
 | target | String| right | 可配置弹出方向，可选项：up / down / left / right
 | bgColor | String | #fff| 设置弹出层背景色，同 background-color |
 | style | Object | {} | 弹出层的样式 |
@@ -70,3 +73,6 @@ React 弹出层组件，函数触发，不污染 DOM。
 | closePosition|String|'right'|配置关闭区位置，可选：left/right|
 | closeContainerStyle | Object | {} |配置容器的样式|
 | handleClose|Function|() => {}|关闭时的处理逻辑|
+
+[React-Page-Mask]:https://github.com/xfcdxg/react-page-mask.git
+[React-Pop-Page]:https://github.com/xfcdxg/react-pop-page.git
