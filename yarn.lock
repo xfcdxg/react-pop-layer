@@ -9880,10 +9880,10 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-page-mask@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-page-mask/-/react-page-mask-1.0.3.tgz#a217b6a391c2f55d4f5fae82eb0ae0c33fb3c2ef"
-  integrity sha512-2HatgjwWQqS3igyhkcKpkNt5C2B3oLJ5qZ22yYU39bCZTKPDMExuBXvLD1PiYP9Az4VCz11rSADQKEyRW8+jCQ==
+react-page-mask@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-page-mask/-/react-page-mask-1.0.5.tgz#4e804c01d9785e46fdd8fc76a8c5d14b84473d2b"
+  integrity sha512-z9S0kMc5WRUccCyJPttvMUeR7crNvNy/3eFwNSTYHXCSUqmXuRfLzuLj3V57f2Z1ZQw1KjM0XQbsoS6NRJ6erw==
   dependencies:
     "@testing-library/jest-dom" "^5.11.4"
     "@testing-library/react" "^11.1.0"
