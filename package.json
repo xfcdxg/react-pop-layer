@@ -36,6 +36,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build-page": "react-scripts build",
     "build": "gulp build && gulp uglify && gulp styleBuild && gulp styleUglify"
   },
   "eslintConfig": {
