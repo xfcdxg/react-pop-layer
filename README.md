@@ -75,4 +75,4 @@ React 弹出层组件，函数触发，不污染 DOM。
 | handleClose|Function|() => {}|关闭时的处理逻辑|
 
 [React-Page-Mask]:https://github.com/xfcdxg/react-page-mask.git
-[React-Pop-Page]:https://github.com/xfcdxg/react-pop-page.git
+[React-Pop-Page]:https://xfcdxg.github.io/react-pop-page/
