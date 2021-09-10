@@ -1,6 +1,6 @@
 {
   "name": "react-pop-page",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "zhou",
   "main": "./lib/index.js",
   "files": [
