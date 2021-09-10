@@ -46,7 +46,7 @@ React 弹出层组件，函数触发，不污染 DOM。
   popPage(<div />, { enableClose: false })
 
   // 不启用浏览器历史
-  popPage(<div />, { enableHash: true })
+  popPage(<div />, { enableHash: false })
 
   // 关闭时处理逻辑
   popPage(<div />, { handleClose: () => {} })
