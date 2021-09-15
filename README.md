@@ -1,4 +1,4 @@
-# react-page-page
+# react-pop-page
 
 React 弹出层组件，函数触发，不污染 DOM。
 
